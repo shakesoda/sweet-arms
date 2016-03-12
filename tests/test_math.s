@@ -33,7 +33,7 @@ report:
 	cmp   r2, r0
 	ldreq r1, =passed
 	ldreq r0, [r1]
-	addeq r0, #1
+	addeq r0, $1
 	streq r0, [r1]
 
 	ldrne r0, =failure
@@ -51,30 +51,30 @@ main:
 
 
 	/* test min */
-	mov   r0, #-5
-	mov   r1, #5
+	mov   r0, $-5
+	mov   r1, $5
 	bl min
 
 	ldr   r1, =_L_min
-	mov   r2, #-5
+	mov   r2, $-5
 	bl report
 
 	/* test max */
-	mov   r0, #50
-	mov   r1, #11
+	mov   r0, $50
+	mov   r1, $11
 	bl max
 
 	ldr   r1, =_L_max
-	mov   r2, #50
+	mov   r2, $50
 	bl report
 
 	/* see if we passed them all */
 	ldr   r0, =passed
 	ldr   r1, [r0]
-	cmp   r1, #2
+	cmp   r1, $2
 	ldreq r0, =allgood
 	ldrne r0, =allbad
 	bl printf
 
-	mov   r0, #0
+	mov   r0, $0
 	pop   {ip, pc}
