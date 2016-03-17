@@ -8,7 +8,7 @@ OUTDIR := obj
 LINKS  := -lSDL
 
 all: .mkbin
-	gcc -o $(OUT) $(SRCS) $(LINKS)
+	gcc -g -o $(OUT) $(SRCS) $(LINKS)
 
 clean:
 	if [ -f $(OUT) ]; then rm $(OUT); fi
