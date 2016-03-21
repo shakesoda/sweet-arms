@@ -57,7 +57,7 @@ main:
 
 	/* save screen */
 	ldr   r1, =screen
-        str   r0, [r1]
+	str   r0, [r1]
 
 	sub  sp, sp, #32
 

@@ -1,4 +1,4 @@
-OUT    := bin/demo
+OUT    := bin/leg
 SRCS   := \
 	src/main.s \
 	src/math.s
